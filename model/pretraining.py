@@ -19,14 +19,14 @@ model = 'roberta'
 # 语料路径和模型保存路径
 # 如果是TPU训练，那么语料必须存放在Google Cloud Storage上面，
 # 路径必须以gs://开头；如果是GPU训练，改为普通路径即可。
-model_saved_path = './bert_model/trump_model.ckpt'
+model_saved_path = './bert_model/biden_model.ckpt'
 corpus_paths = [
-    './model/corpus_tfrecord/corpus_trump.tfrecord'
+    './model/corpus_tfrecord/corpus_biden.tfrecord'
 ]
 
 # 其他配置
 sequence_length = 512
-batch_size = 64
+batch_size = 32
 config_path = './bert_model/bert_config.json'
 checkpoint_path = './bert_model/bert_model.ckpt'  # 如果从零训练，就设为None
 learning_rate = 0.00176
